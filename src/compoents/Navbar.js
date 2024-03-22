@@ -51,7 +51,7 @@ function Navbar(props) {
                   </li>
                   <li>
                     <a className="dropdown-item" href="/">
-                      Another action
+                      Another Action
                     </a>
                   </li>
                   <li>
