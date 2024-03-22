@@ -1,11 +1,21 @@
 import React, { useState } from "react";
 
 function TextForm(props) {
-  const [text, setText] = useState("Enter the text");
+  const [text, setText] = useState("");
 
   const changeupper = () => {
     const uppercaseText = text.toUpperCase();
     setText(uppercaseText);
+  };
+
+  const changelower = () => {
+    const lowercasewala = text.toLowerCase();
+    setText(lowercasewala);
+  };
+
+  const empty = () => {
+    const emptywala = "";
+    setText(emptywala);
   };
 
   return (
@@ -20,13 +30,23 @@ function TextForm(props) {
           onChange={(e) => setText(e.target.value)}
         ></textarea>
       </div>
-      <button className="btnforupcase" onClick={changeupper}>
+      <button className="btn btn-primary my-3" onClick={changeupper}>
         Convert To Uppercase
       </button>
+      <button type="button" className="btn btn-primary mx-3" onClick={changelower}>
+        Convert To Lowercase
+      </button>
+      <button className="btn btn-danger mx-2" onClick={empty}>
+        Clear
+      </button>
       <div className="wordscount">
-        <h4>
-            Your words count as : <p> {text.split(" ").length} words and {text.length} characters </p>
-        </h4>
+        <h5>
+          Your words count as :{" "}
+          <p>
+            {" "}
+            {text.split(" ").length} words and {text.length} characters{" "}
+          </p>
+        </h5>
       </div>
     </>
   );
