@@ -23,6 +23,11 @@ function TextForm(props) {
       <button className="btnforupcase" onClick={changeupper}>
         Convert To Uppercase
       </button>
+      <div className="wordscount">
+        <h4>
+            Your words count as : <p> {text.split(" ").length} words and {text.length} characters </p>
+        </h4>
+      </div>
     </>
   );
 }
